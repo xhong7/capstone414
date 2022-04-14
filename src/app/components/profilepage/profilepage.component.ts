@@ -29,6 +29,7 @@ export class ProfilepageComponent implements OnInit {
   theDocument: any;
   thePicId: any;
   thePic: any;
+  company:any;
 
   constructor(private data: SubmitAppService, private route: ActivatedRoute, private router: Router) { }
 
@@ -53,7 +54,9 @@ export class ProfilepageComponent implements OnInit {
         console.log(this.theProfile);
       });}
   }
-
+  ngDoCheck():void{
+    this.company=this.data.employedBy;
+  }
   //need to populate form page when user clicks edit
 
   downloadResume()

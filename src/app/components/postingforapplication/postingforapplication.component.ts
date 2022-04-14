@@ -58,6 +58,8 @@ export class PostingforapplicationComponent implements OnInit {
     this.data.accept_offer(this.post).subscribe(info=>{
       console.log(info);
     })
+    this.data.employedBy=this.companyInfo.job_company;
   }
+  
 
 }

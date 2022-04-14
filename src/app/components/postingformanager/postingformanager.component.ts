@@ -55,6 +55,7 @@ export class PostingformanagerComponent implements OnInit {
     this.data.offer_applicant(this.applicationID).subscribe(info => {
       console.log(info);
     });
+   
     this.router.navigate(['/home']);
   }
 

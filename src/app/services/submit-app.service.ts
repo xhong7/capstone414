@@ -53,6 +53,7 @@ newManager:String;
 post:any;
 job_id:any;
 postManager:any;
+employedBy:any;
   constructor(private http: HttpClient){ }
 
   get_user(id:any):Observable<any>{
