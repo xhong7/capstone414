@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+<br><br><br><br>
+<div class="container">
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="career-search mb-60">
+                        <div class="filter-result">
+                            <mat-tab-group mat-align-tabs="center">
+                                <mat-tab label="Pending">
+                                    <h1 *ngIf="!pendingJobExist">No Job Avaliable</h1>
+                                    <app-postingforapplication *ngFor="let post of PendingJobs" [post]="post" [hasButtons]=false></app-postingforapplication>
+                                </mat-tab>
+                                <mat-tab label="Job Offered">
+                                    <h1 *ngIf="!offeredJobExist">No Job Avaliable</h1>
+                                    <app-postingforapplication *ngFor="let post of JobsOffered" [post]="post" [hasButtons]=true></app-postingforapplication>
+                                </mat-tab>
+                                <mat-tab label="Denied">
+                                    <h1 *ngIf="!deniedJobExist">No Job Avaliable</h1>
+                                    <app-postingforapplication *ngFor="let post of DeniedJobs" [post]="post"  [hasButtons]=false></app-postingforapplication>
+                                </mat-tab>
+                              </mat-tab-group>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>

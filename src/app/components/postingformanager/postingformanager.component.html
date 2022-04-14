@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+<br><br><br><br>
+<div class="container">
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="career-search mb-60">
+                        <div class="filter-result">
+                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                        {{post.first_name}}
+                                    </div>
+                                    <div class="job-content">
+                                        <h5 class="text-center text-md-left">{{post.first_name}} {{post.last_name}}</h5> <!--populate data with our jobs-->
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                {{post.applicant_education[0].Level}} <br> {{post.applicant_interests[0].interest}} <br> {{post.city}}, {{post.country}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="job-right my-4 flex-shrink-0">
+                                    <!--<button class="btn btn-primary" (click)="downloadResume()">Download Resume</button>-->
+                                    <button class="btn btn-secondary" (click)="acceptApplicant()">Accept</button>
+                                    <button class="btn btn-primary" (click)="denyApplicant()">Deny</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
