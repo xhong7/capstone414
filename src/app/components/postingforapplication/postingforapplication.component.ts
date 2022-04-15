@@ -52,13 +52,15 @@ export class PostingforapplicationComponent implements OnInit {
     this.data.deny_offer(this.post).subscribe(info=>{
       console.log(info);
     })
-
+    this.router.navigate(['/home']);
+    
   }
   acceptOffer(){
     this.data.accept_offer(this.post).subscribe(info=>{
       console.log(info);
     })
     this.data.employedBy=this.companyInfo.job_company;
+    this.router.navigate(['/home']);
   }
   
 

@@ -49,6 +49,7 @@ ngDoCheck(): void {
   ifLogin(){
     if(this.data.role!==''){
       this.data.role='';
+      this.data.employedBy=undefined;
       
     };
     
