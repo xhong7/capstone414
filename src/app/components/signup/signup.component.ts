@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
   roles = 
   [
     { name: "Manager", value: "manager"},
-    { name: "Recruiter", value: "recruiter"},
+   
     { name: "Applicant", value: "applicant"}
   ]
   role: String;
